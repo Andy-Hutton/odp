@@ -2,8 +2,10 @@
   box-sizing: border-box;
 }
 
-.duck {width: 100px;
+.duck {width: 120px;
 max-height: 90px;}
+
+
 
 body {
   background-color: aquamarine;
@@ -17,12 +19,12 @@ body {
 /* grid styles referes to lines not the box! will take reference from above layout */
 /* grid area, gridrowstart/ gridcolumnstart/ gridrowend/ gridcolumnend */
 header {
+  min-height: 130px;
   text-align: center;
   position: relative;
   font-size: 4rem;
   font-weight: bold;
-  
-  grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3;
   background-color: aqua;
   color: rgb(215, 215, 9);
   text-decoration-line: underline;
@@ -38,6 +40,7 @@ text-shadow: 3px 3px 3px black;
 }
 
 #main-container {
+  padding-top: 100px;
   grid-area: 2 / 2 / 3 / 3;
   background-color: rgb(104, 162, 143);
   display: flex;
@@ -45,7 +48,8 @@ text-shadow: 3px 3px 3px black;
   justify-content: space-between; 
 }
 #img-container img {
-  max-width: 30%;
+  max-width: 300px;
+  max-height: 300px;
 }
 footer {
   grid-area: 3 / 1 / 4 / 3;
