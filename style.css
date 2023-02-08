@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+.duck {width: 100px;
+max-height: 90px;}
+
 body {
   background-color: aquamarine;
   color: antiquewhite;
@@ -14,9 +17,18 @@ body {
 /* grid styles referes to lines not the box! will take reference from above layout */
 /* grid area, gridrowstart/ gridcolumnstart/ gridrowend/ gridcolumnend */
 header {
+  text-align: center;
+  position: relative;
+  font-size: 4rem;
+  font-weight: bold;
+  
   grid-area: 1 / 1 / 2 / 3;
   background-color: aqua;
-  color: black;
+  color: rgb(215, 215, 9);
+  text-decoration-line: underline;
+  text-decoration-color: darkcyan;
+  text-decoration-style: wavy;
+text-shadow: 3px 3px 3px black;
 }
 
 #results {
@@ -30,9 +42,19 @@ header {
   background-color: rgb(104, 162, 143);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; 
+}
+#img-container img {
+  max-width: 30%;
 }
 footer {
   grid-area: 3 / 1 / 4 / 3;
   background-color: rgb(44, 110, 88);
+}
+
+#image-containe{ flex;
+justify-content: space-between;
+}
+#img-container img{
+  max-width: 30%;
 }
