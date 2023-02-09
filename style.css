@@ -14,8 +14,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 8fr 1fr;
-  min-height: 100vh
-  min-width: auto;
+  min-height: 100vh;
 }
 
 /* grid styles referes to lines not the box! will take reference from above layout */
@@ -27,8 +26,12 @@ header {
   font-size: 4rem;
   font-weight: bold;
   grid-area: 1 / 1 / 2 / 3;
-  background-color: aqua;
-  color: rgb(215, 215, 9);
+  background: rgb(208, 224, 9);
+  background: radial-gradient(
+    circle,
+    rgba(208, 224, 9, 1) 45%,
+    rgba(93, 182, 139, 1) 60%
+  );
   text-decoration-line: underline;
   text-decoration-color: darkcyan;
   text-decoration-style: wavy;
@@ -52,13 +55,18 @@ header {
 #img-container img {
   max-width: 30%;
   max-height: 300px;
+  justify-content: space-around;
 }
 
 footer {
   grid-area: 3 / 1 / 4 / 3;
-  background-color: rgb(44, 110, 88);
+  background: rgb(16, 238, 238);
 }
 
-#image-container {
-  justify-content: space-between;
+#lorem-container {
+  font-family: Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 12px;
+  height: 150px;
+  width: 800px;
 }
