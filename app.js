@@ -105,12 +105,50 @@ function handleClick(event) {
   if (totalClicks === maxClicks) {
     alert("thanks for voting");
     imgContainer.removeEventListener("click", handleClick);
+    renderChart();
+
     return;
   }
 
   // get three new images
   renderImages();
 }
+function renderChart() {
+  const myChart = document.getElementById("chart");
+  let labels = [];
+  let viewsData = [];
+  let clicksData = [];
+
+  for (let i = 0; i < Product.allProducts.length; i++) {
+    labels.push(Product.allProducts[i].name);
+    viewsData.push(Product.allProducts[i].views);
+    clicksData.push(Product.allProducts[i].clicks);
+  }
+
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: "# of Views",
+        data: viewsData,
+        borderWidth: 1,
+      },
+      {
+        label: "# of Votes",
+        data: clicksData,
+        borderWidth: 1,
+      },
+    ],
+  };
+  const config = {
+    type: "bar",
+    data: data,
+  };
+  new Chart(myChart, config);
+}
+
+// render the inital images
+renderImages();
 
 const imgContainer = document.getElementById("img-container");
 imgContainer.addEventListener("click", handleClick);
