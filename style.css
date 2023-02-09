@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 
-.duck {width: 120px;
-max-height: 90px;}
-
-
+.duck {
+  width: 120px;
+  max-height: 90px;
+}
 
 body {
   background-color: aquamarine;
@@ -24,13 +24,13 @@ header {
   position: relative;
   font-size: 4rem;
   font-weight: bold;
-    grid-area: 1 / 1 / 2 / 3;
+  grid-area: 1 / 1 / 2 / 3;
   background-color: aqua;
   color: rgb(215, 215, 9);
   text-decoration-line: underline;
   text-decoration-color: darkcyan;
   text-decoration-style: wavy;
-text-shadow: 3px 3px 3px black;
+  text-shadow: 3px 3px 3px black;
 }
 
 #results {
@@ -45,20 +45,18 @@ text-shadow: 3px 3px 3px black;
   background-color: rgb(104, 162, 143);
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 #img-container img {
-  max-width: 300px;
+  max-width: 30%;
   max-height: 300px;
 }
+
 footer {
   grid-area: 3 / 1 / 4 / 3;
   background-color: rgb(44, 110, 88);
 }
 
-#image-containe{ flex;
-justify-content: space-between;
-}
-#img-container img{
-  max-width: 30%;
+#image-container {
+  justify-content: space-between;
 }
